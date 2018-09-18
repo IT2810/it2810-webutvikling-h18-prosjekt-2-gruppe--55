@@ -1,21 +1,59 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Pictures from "./pictures";
+import Poems from "./poems";
 class App extends Component {
-  render() {
-    return (
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+
+            poems: [],
+            isLoaded: false,
+            pics:[],
+
+
+
+        }
+    }
+
+    componentDidMount() {
+        fetch('document.json')
+            .then(res => res.json())
+            .then(json => {
+                this.setState({
+                    isLoaded: true,
+                    poems: json,
+                })
+            });
+        fetch('svgtest.json')
+            .then(res => res.json())
+            .then(json => {
+                this.setState({
+
+                    pics: json,
+                })
+            })
+    }
+    render() {
+
+        let { isLoaded} = this.state;
+
+        if(!isLoaded){
+            return<div>Loading...</div>
+        }else{
+
+
+        return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <Poems poems={this.state.poems}/>
+          <Pictures pics={this.state.pics}/>
+
       </div>
     );
-  }
+  }}
 }
 
 export default App;
