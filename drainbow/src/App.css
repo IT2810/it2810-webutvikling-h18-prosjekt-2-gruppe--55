@@ -82,6 +82,33 @@ p {
   display: flex;
   grid-area: slider;
 }
+#happypoem{
+  display: block;
+}
+#sadpoem{
+  display: none;
+}
+#angrypoem{
+  display: none;
+}
+#happyimg{
+  display: block;
+}
+#sadimg{
+  display: none;
+}
+#angryimg{
+  display: none;
+}
+#happysound{
+  display: block;
+}
+#sadsound{
+  display: none;
+}
+#angrysound{
+  display: none;
+}
 
 
 /*
