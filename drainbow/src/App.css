@@ -21,6 +21,25 @@
 .App-intro {
   font-size: large;
 }
+#happypoem{
+  display: block;
+}
+#sadpoem{
+  display: none;
+}
+#angrypoem{
+  display: none;
+}
+#happyimg{
+  display: block;
+}
+#sadimg{
+  display: none;
+}
+#angryimg{
+  display: none;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

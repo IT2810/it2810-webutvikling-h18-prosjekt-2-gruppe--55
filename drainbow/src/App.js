@@ -11,49 +11,101 @@ class App extends Component {
         this.state = {
 
             poems: [],
-            isLoaded: false,
             pics:[],
-
-
+            catvalue: 0,
 
         }
     }
 
     componentDidMount() {
-        fetch('document.json')
+        fetch('poem.json')
             .then(res => res.json())
             .then(json => {
                 this.setState({
-                    isLoaded: true,
+
                     poems: json,
                 })
             });
-        fetch('svgtest.json')
+        fetch('pictures.json')
             .then(res => res.json())
             .then(json => {
                 this.setState({
 
                     pics: json,
                 })
-            })
+            });
+
     }
+    handelTabs = (buttonID, catv) => {
+        if(buttonID===0){
+            catv=0 }
+       else if(buttonID===1){
+            catv=1
+        }
+        else if(buttonID===2){
+            catv=2
+        }
+        else{
+            catv=3
+        }
+        console.log(catv+"button pressed"+(buttonID))
+        this.setState({catvalue: catv})
+
+};
+    handleradio = (categorytype)  =>{
+
+        if(categorytype=="happypoem"){
+            document.getElementById(categorytype).style.display = 'block';
+            document.getElementById("sadpoem").style.display = 'none';
+            document.getElementById("angrypoem").style.display = 'none';
+        }
+        else if(categorytype=="sadpoem"){
+            document.getElementById(categorytype).style.display = 'block';
+            document.getElementById("happypoem").style.display = 'none';
+            document.getElementById("angrypoem").style.display = 'none';
+
+        }else if (categorytype=="angrypoem"){
+            document.getElementById(categorytype).style.display = 'block';
+            document.getElementById("happypoem").style.display = 'none';
+            document.getElementById("sadpoem").style.display = 'none';
+
+        }
+        else if(categorytype=="happyimg"){
+            document.getElementById(categorytype).style.display = 'block';
+            document.getElementById("sadimg").style.display = 'none';
+            document.getElementById("angryimg").style.display = 'none';
+        }
+        else if(categorytype=="sadimg"){
+            document.getElementById(categorytype).style.display = 'block';
+            document.getElementById("happyimg").style.display = 'none';
+            document.getElementById("angryimg").style.display = 'none';
+
+        }else if (categorytype=="angryimg"){
+            document.getElementById(categorytype).style.display = 'block';
+            document.getElementById("happyimg").style.display = 'none';
+            document.getElementById("sadimg").style.display = 'none';
+
+        }
+
+    };
+
     render() {
 
-        let { isLoaded} = this.state;
-
-        if(!isLoaded){
-            return<div>Loading...</div>
-        }else{
 
 
         return (
+
       <div className="App">
-          <Poems poems={this.state.poems}/>
-          <Pictures pics={this.state.pics}/>
+          <button onClick={()=>this.handelTabs(0,this.state.catvalue)}>1</button>
+          <button onClick={()=>this.handelTabs(1,this.state.catvalue)}>2</button>
+          <button onClick={()=>this.handelTabs(2,this.state.catvalue)}>3</button>
+          <button onClick={()=>this.handelTabs(3,this.state.catvalue)}>4</button>
+          <Poems poems={this.state.poems} catvalue={this.state.catvalue} checkRadio={this.handleradio}/>
+          <Pictures pics={this.state.pics} catvalue={this.state.catvalue} checkRadio={this.handleradio}/>
 
       </div>
     );
-  }}
+  }
 }
 
 export default App;
