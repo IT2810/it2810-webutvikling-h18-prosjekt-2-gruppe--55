@@ -47,7 +47,7 @@ class App extends Component {
 
         return (
       <div className="App">
-<<<<<<< HEAD
+
 
       <div className="ImgWrap">
       <img className="Image" src={"../img/1-1.jpg"} alt="happy1"/>
@@ -57,7 +57,7 @@ class App extends Component {
         </div>
         <div className="grid-sound">
           <img className="sound" src={"../img/soundOn.svg"} alt="soundOn"/></div>
-        <div className="grid-text"><p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p></div>
+        <div className="grid-text"> <Poems poems={this.state.poems}/></div>
         <div className="grid-slider">
         <svg className="sliderImage">
           <circle className="1"  r="7" fill="#D3BDB0" cy="120" />
@@ -69,15 +69,15 @@ class App extends Component {
 
 
 
-        </div>
+
         </div>
 
-=======
-          <Poems poems={this.state.poems}/>
+
+
           <Pictures pics={this.state.pics}/>
 
       </div>
->>>>>>> 526165b6c7c3f17fd9daf820ead2e11142a9a2e8
+
     );
   }}
 }
