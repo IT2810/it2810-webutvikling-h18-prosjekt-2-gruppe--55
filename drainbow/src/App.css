@@ -53,9 +53,10 @@ p {
   grid-template-rows: 1fr 1.5fr 1.5fr 1fr;
   grid-template-areas:
   "menu . sound"
+  "menu . sound"
   ". text ."
   ". text ."
-  ". slider ."
+  ". tab ."
 
 }
 
@@ -78,9 +79,9 @@ p {
   grid-area: text;
 }
 
-.grid-slider {
+.grid-tab {
   display: flex;
-  grid-area: slider;
+  grid-area: tab;
 }
 #happypoem{
   display: block;
@@ -109,6 +110,18 @@ p {
 #angrysound{
   display: none;
 }
+
+
+.grid-tab button {
+  background-color: lightgray;
+  float: left;
+  cursor: pointer;
+  padding: 30px 30px;
+
+}
+
+
+
 
 
 /*
@@ -173,12 +186,13 @@ p {
 @media screen and (max-width: 500px) {
   body{
     background-color: white;
+
   }
 
 }
 
 @media screen and (min-width: 501px) and ( max-width: 1000px) {
   body{
-    background-color: green;
+
   }
 }
