@@ -1,26 +1,26 @@
 [
-  "<img   src=\"img/happy.svg\" alt=\"no picture\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img   src=\"img/happy.svg\" alt=\"no picture\" />",
 
-  "<img  src=\"img/happy1.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/happy1.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/happy2.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/happy2.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/happy3.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/happy3.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/sad.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/sad.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/sad1.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/sad1.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/sad2.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/sad2.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/sad3.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/sad3.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/angry.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/angry.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/angry1.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/angry1.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/angry2.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>",
+  "<img  src=\"img/angry2.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" />",
 
-  "<img  src=\"img/angry3.svg\" alt=\"no picture\" height=\"800\" width=\"800px\" style='max-width: 100%; height: auto; width: auto'/>"
+  "<img  src=\"img/angry3.svg\" alt=\"no picture\" height=\"800\" width=\"800px\"/>"
 
 ]

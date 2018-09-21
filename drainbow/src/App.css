@@ -6,9 +6,6 @@
 
 }
 
-
-
-/* Image-stuff */
 .ImgWrap {
   width: 100vh;
   height: 100vh;
@@ -21,9 +18,6 @@
 
 }
 
-/* Text-stuff */
-
-
 .TextWrap{
   border: 1px solid black;
   position: absolute;
@@ -34,63 +28,29 @@
 p {
   line-height: 1.3;
   display: inline;
-  background-color: #90BE6D;
+  background-color: rgb(116, 5, 92);
   font-family: georgia;
   color: #EAEFBD;
   font-size: 1.2em;
 }
 
-/* grid-stuff */
-      /*
-      .grid-container{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 1fr 2fr 2fr 1fr;
-        grid-template-areas:
-        '...';
-        grid-gap: 10px;
-        background-color: none;
-        padding: 10px;
+/*width skal sette griden til å være responsiv, ikke lyktes helt*/
+.item1 { grid-area: header ; width: 100%; margin:auto }
+.item2 { grid-area: optionsmenu; width: 30%; }
+.item3 { grid-area: picture; width: 10%; width: 100vh; height: 100vh; }
+.item4 { grid-area: audio; width: 20%; }
+.item5 { grid-area: poem; width: 30%; }
 
-      }
-      */
-.item1 { grid-area: header; }
-.item2 { grid-area: optionsmenu; }
-.item3 { grid-area: picture; }
-.item4 { grid-area: audio; }
-.item5 { grid-area: poem; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
-<<<<<<< HEAD
-    'header header header header header header'
-    'optionsmenu picture picture picture audio audio'
-    'optionsmenu picture picture picture poem poem ';
+    'header header header audio audio audio'
+    'optionsmenu picture picture picture poem poem'
+    ;
   grid-gap: 10px;
-  background-color: #2196F3;
   padding: 10px;
-=======
-  "menu . sound"
-  "menu . sound"
-  ". text ."
-  ". text ."
-  ". tab ."
-
->>>>>>> 7782cb52d5e992e663779cdd4b6979f6b5e76230
 }
-/*  .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 10px 0;
-    font-size: 30px;
-  }
-*/
 .grid-menu {
   display: flex;
   justify-content: flex-start;
@@ -98,7 +58,7 @@ p {
 }
 
 .grid-sound {
-  display: flex;
+  display: left;
   padding: 10px;
   grid-area: sound;
 }
@@ -110,9 +70,9 @@ p {
   grid-area: text;
 }
 
-.grid-tab {
+.grid-slider {
   display: flex;
-  grid-area: tab;
+  grid-area: slider;
 }
 #happypoem{
   display: block;
@@ -143,70 +103,6 @@ p {
 }
 
 
-.grid-tab button {
-  background-color: lightgray;
-  float: left;
-  cursor: pointer;
-  padding: 30px 30px;
-
-}
-
-
-
-
-
-/*
-.grid-menu  {
-  grid-row: 1;
-  grid-column: 1;
-}
-
-.grid-upperSpace{
-  grid-row: 1;
-  grid-column: 2;
-}
-
-.grid-sound {
-  grid-row: 1;
-  grid-column: 3;
-}
-
-.grid-leftspace {
-  grid-row: 2;
-  grid-column: 1;
-}
-
-.grid-text {
-  text-decoration: overline;
-  grid-row: 2;
-  grid-column: 2;
-}
-
-.grid-rightspace {
-  grid-row: 2;
-  grid-column: 3;
-}
-
-.grid-lowerleft {
-  grid-row: 3;
-  grid-column: 1;
-}
-
-.grid-slider {
-  grid-row: 3;
-  grid-column: 2;
-}
-
-.grid-lowerright {
-  grid-row: 3;
-  grid-column: 3;
-}
-
-*/
-
-
-/* Other stuff */
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
@@ -217,13 +113,12 @@ p {
 @media screen and (max-width: 500px) {
   body{
     background-color: white;
-
   }
 
 }
 
 @media screen and (min-width: 501px) and ( max-width: 1000px) {
   body{
-
+    background-color: none;
   }
 }

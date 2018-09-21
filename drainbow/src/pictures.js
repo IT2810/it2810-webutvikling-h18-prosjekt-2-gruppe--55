@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 
 
-
+/* spesifiserer bilder til websiden*/
 class Pictures extends Component {
     render() {
         const {pics, catvalue, } =this.props;

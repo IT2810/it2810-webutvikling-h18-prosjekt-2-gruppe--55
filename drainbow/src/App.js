@@ -18,7 +18,7 @@ class App extends Component {
 
         }
     }
-
+        /* henter informasjon fra ajax*/
     componentDidMount() {
         fetch('poem.json')
             .then(res => res.json())
@@ -46,6 +46,7 @@ class App extends Component {
             });
 
     }
+    /* skifter side*/
     handelTabs = (buttonID, catv) => {
         if(buttonID===0){
             catv=0 }
@@ -63,7 +64,7 @@ class App extends Component {
 
 };
 
-
+    /* bestemmer hva som vises av innhold */
     handleradio = (categorytype)  =>{
         const a=document.getElementById(categorytype);
 
@@ -128,14 +129,13 @@ class App extends Component {
 
     render() {
 
-
+    
 
         return (
-    
-      <div className="App">
-    <body>         
-              <div className="grid-container">
-                <div className="item1">
+    /* konstruerer siden */      
+     <div className="App">
+            <div className="grid-container">
+                <div className="item1"> <p>Pages</p>
                 <div>
                         <button onClick={()=>this.handelTabs(0,this.state.catvalue)}>1</button>
                         <button onClick={()=>this.handelTabs(1,this.state.catvalue)}>2</button>
@@ -143,22 +143,18 @@ class App extends Component {
                         <button onClick={()=>this.handelTabs(3,this.state.catvalue)}>4</button>
                         </div> 
                     </div>
-                <div className= "item2"><Menu checkRadio={this.handleradio}/> 
+                <div className= "item2"><p>Categories</p><Menu checkRadio={this.handleradio}/> 
                     </div>
                 <div className= "item3"><Pictures pics={this.state.pics} catvalue={this.state.catvalue}/> 
                     </div>  
                 <div className="item4">
-                    <img className="sound" src={"../img/soundOn.svg"} alt="soundOn"/>
                     <Sound sound={this.state.sound} catvalue={this.state.catvalue}/>
                     </div>
                 <div className="item5"> <Poems poems={this.state.poems} catvalue={this.state.catvalue}/>
                 </div>
                 </div> 
-        </body>
-        </div>
-      
-      
-    );
+        </div>     
+      );
   }
 }
 
