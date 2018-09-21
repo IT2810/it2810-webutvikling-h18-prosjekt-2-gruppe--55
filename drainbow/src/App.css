@@ -41,24 +41,47 @@ p {
 }
 
 /* grid-stuff */
+      /*
+      .grid-container{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        grid-template-areas:
+        '...';
+        grid-gap: 10px;
+        background-color: none;
+        padding: 10px;
 
-.grid-container{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+      }
+      */
+.item1 { grid-area: header; }
+.item2 { grid-area: optionsmenu; }
+.item3 { grid-area: picture; }
+.item4 { grid-area: audio; }
+.item5 { grid-area: poem; }
+
+.grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1.5fr 1.5fr 1fr;
   grid-template-areas:
-  "menu . sound"
-  ". text ."
-  ". text ."
-  ". slider ."
-
+    'header header header header header header'
+    'optionsmenu picture picture picture audio audio'
+    'optionsmenu picture picture picture poem poem ';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
-
+/*  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+  }
+*/
 .grid-menu {
   display: flex;
   justify-content: flex-start;

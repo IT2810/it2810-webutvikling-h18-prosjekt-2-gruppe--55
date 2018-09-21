@@ -130,38 +130,45 @@ class App extends Component {
 
 
         return (
-
+    
       <div className="App">
-
-          <div className="ImgWrap">
-
-              <Pictures pics={this.state.pics} catvalue={this.state.catvalue}/>
-
+    <body>         
               <div className="grid-container">
-        <div className="grid-menu">
-
-          <img className="menu" src={"../img/menu.svg"} alt="menu" onClick={()=>this.handelCheck("hei")}/>
+                <div className="item1">
+                <div>
+                        <button onClick={()=>this.handelTabs(0,this.state.catvalue)}>1</button>
+                        <button onClick={()=>this.handelTabs(1,this.state.catvalue)}>2</button>
+                        <button onClick={()=>this.handelTabs(2,this.state.catvalue)}>3</button>
+                        <button onClick={()=>this.handelTabs(3,this.state.catvalue)}>4</button>
+                        </div> 
+                    </div>
+                <div className= "item2"><Menu checkRadio={this.handleradio}/> 
+                    </div>
+                <div className= "item3"><Pictures pics={this.state.pics} catvalue={this.state.catvalue}/> 
+                    </div>  
+                <div className="item4">
+                    <img className="sound" src={"../img/soundOn.svg"} alt="soundOn"/>
+                    <Sound sound={this.state.sound} catvalue={this.state.catvalue}/>
+                    </div>
+                <div className="item5"> <Poems poems={this.state.poems} catvalue={this.state.catvalue}/>
+                </div>
+                </div> 
+                
+                <div className="grid-slider">
+                    <div>
+                        <button onClick={()=>this.handelTabs(0,this.state.catvalue)}>1</button>
+                        <button onClick={()=>this.handelTabs(1,this.state.catvalue)}>2</button>
+                        <button onClick={()=>this.handelTabs(2,this.state.catvalue)}>3</button>
+                        <button onClick={()=>this.handelTabs(3,this.state.catvalue)}>4</button>
+                    </div>
+                <svg className="sliderImage">
+                <circle className="1"  r="7" fill="#D3BDB0" cy="120" />
+                </svg>
         </div>
-        <div className="grid-sound">
-          <img className="sound" src={"../img/soundOn.svg"} alt="soundOn"/>
-            <Sound sound={this.state.sound} catvalue={this.state.catvalue}/></div>
-        <div className="grid-text"> <Poems poems={this.state.poems} catvalue={this.state.catvalue}/></div>
-            <Menu checkRadio={this.handleradio}/>
-            <div className="grid-slider">
-             <div>
-                <button onClick={()=>this.handelTabs(0,this.state.catvalue)}>1</button>
-                <button onClick={()=>this.handelTabs(1,this.state.catvalue)}>2</button>
-                <button onClick={()=>this.handelTabs(2,this.state.catvalue)}>3</button>
-                <button onClick={()=>this.handelTabs(3,this.state.catvalue)}>4</button>
-             </div>
-        <svg className="sliderImage">
-          <circle className="1"  r="7" fill="#D3BDB0" cy="120" />
-        </svg>
+        </body>
         </div>
-        </div>
-      </div>
-      </div>
-
+      
+      
     );
   }
 }
